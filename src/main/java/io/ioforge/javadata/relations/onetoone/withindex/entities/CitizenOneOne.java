@@ -1,11 +1,13 @@
 package io.ioforge.javadata.relations.onetoone.withindex.entities;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 
-@Data
+@Getter
+@Setter
 @Entity
 @Table(indexes = {
         @Index(columnList = "passport_id", name = "passport_id_idx")
